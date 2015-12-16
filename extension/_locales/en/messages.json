@@ -1,0 +1,10 @@
+{
+	"name": {
+		"message": "Twitch Emotes for WhatsApp",
+		"description": "Title."
+	},
+	"description": {
+		"message": "This extension enable use of Twitch Emotes on WhatsApp Web",
+		"description": "Description of the extension."
+	}
+}

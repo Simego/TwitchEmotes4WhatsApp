@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_name__",
+  "version": "1.1",
+  "default_locale": "en",
+  "description": "__MSG_description__",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "author": "Daniel Rafaelli (Simego)",
+  "content_scripts": [
+    {
+      "matches": ["*://web.whatsapp.com/*"],
+      "js": ["js/jquery.js", "js/bootstrap.min.js", "js/background.js"],
+      "css": ["css/background-style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["tabs", "*://web.whatsapp.com/*"],
+  "short_name": "TE4Whats"
+}

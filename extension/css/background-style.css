@@ -1,0 +1,8 @@
+.tooltip.bottom,
+.tooltip.top {
+	margin-left: 0px !important;
+}
+
+.tooltip.bottom {
+	margin-top: 10px;
+}

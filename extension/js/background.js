@@ -13,7 +13,7 @@ $("#app").bind("DOMSubtreeModified", function(evt) {
 					console.debug('WhatsTwitch Emotes loaded');
 					var first = $(".menu.menu-horizontal").children().first();
 					if(first.find(".twitch").length == 0) {
-						$(".menu.menu-horizontal").children().first().prepend('<div class="menu-item twitch" data-toggle="tooltip" data-placement="bottom" title="Twitch Emotes by Simego" ><img src="http://www.twitch.tv/favicon.ico"/></div>');
+						$(".menu.menu-horizontal").children().first().prepend('<div class="menu-item twitch" data-toggle="tooltip" data-placement="bottom" title="Twitch Emotes by Simego" ><img src="https://www.twitch.tv/favicon.ico"/></div>');
 						$(".menu.menu-horizontal").children().first().children().first().tooltip();
 					}
 				});
@@ -32,10 +32,9 @@ var runTwitchEmotesLoader = function() {
 	console.debug('Running TwitchEmotesLoader.')
 
 	var run = function() {
-		var messageList = $("#main > div > div.pane-chat-msgs.pane-chat-body > div.message-list");
+		var messageList = $("#main > div > div:nth-child(1) > div > div.message-list");
 
 		parseMessages(messageList.find('.msg:not(.twitched)'));
-
 
 		var functionToRun = function(evt) {
 	    	parseMessages($(evt.target).find('.msg:not(.twitched)'));
